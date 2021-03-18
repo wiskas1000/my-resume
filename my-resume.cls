@@ -43,7 +43,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \RequirePackage[utf8]{inputenc}
+
 \RequirePackage[T1]{fontenc}
+% \RequirePackage{fontspec}
+% \defaultfontfeatures{Path = /usr/share/texmf-dist/fonts/opentype/public/fontawesome/}
 \RequirePackage{tikz}
 \usetikzlibrary{arrows}
 \RequirePackage[skins]{tcolorbox}       % somehow required for tikz to work at all
