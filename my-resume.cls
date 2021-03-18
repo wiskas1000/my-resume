@@ -14,6 +14,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{my-resume}[2020/11/17 my-resume v0.1, my own resume/CV class.]
 
+% Change settings when using a different compiler
+\usepackage{ifluatex}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CLASS OPTIONS
@@ -37,16 +40,21 @@
 \LoadClass{scrartcl}
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % REQUIRED PACKAGES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \RequirePackage[utf8]{inputenc}
+\ifluatex 
+	\RequirePackage{fontspec}
+	% \defaultfontfeatures{Path = /usr/share/texmf-dist/fonts/opentype/public/fontawesome/}
+    \defaultfontfeatures{Ligatures={TeX}}
+\else
+	\RequirePackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+\fi
 
-\RequirePackage[T1]{fontenc}
-% \RequirePackage{fontspec}
-% \defaultfontfeatures{Path = /usr/share/texmf-dist/fonts/opentype/public/fontawesome/}
+\usepackage[english]{babel}
+
 \RequirePackage{tikz}
 \usetikzlibrary{arrows}
 \RequirePackage[skins]{tcolorbox}       % somehow required for tikz to work at all
