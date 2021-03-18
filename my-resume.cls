@@ -53,8 +53,6 @@
 	\usepackage[T1]{fontenc}
 \fi
 
-\usepackage[english]{babel}
-
 \RequirePackage{tikz}
 \usetikzlibrary{arrows}
 \RequirePackage[skins]{tcolorbox}       % somehow required for tikz to work at all
